@@ -20,7 +20,11 @@ public class Principal {
 		byte[] arrStream = strm.readAllBytes();
 //		Se crea un for each para mostrar en pantalla todos los datos en formato numerico
 		for(byte tmp: arrStream) {
-			System.out.println(tmp);
+//			System.out.println(tmp);
+/*			Aqui se hizo un cast a tipo char para que de esta forma pueda imprimir en consola exactamente igual a como se observa 
+ * 			visualmente el original JSON
+ * **/
+			System.out.print((char)tmp);
 		}
 		
 	}
