@@ -18,13 +18,23 @@ public class Principal {
 		InputStream strm = cx.getInputStream();
 //		se convierten todos los datos extraidos a un arreglo de tipo byte
 		byte[] arrStream = strm.readAllBytes();
+		
+//		Se creo una variable que almacenara los datos mas especificamente
+		String cntJson = "";
+		
 //		Se crea un for each para mostrar en pantalla todos los datos en formato numerico
 		for(byte tmp: arrStream) {
 //			System.out.println(tmp);
 /*			Aqui se hizo un cast a tipo char para que de esta forma pueda imprimir en consola exactamente igual a como se observa 
  * 			visualmente el original JSON
- * **/
-			System.out.print((char)tmp);
+ *
+ *			System.out.print((char)tmp);
+* **/			
+/*			La diferencia con el anterio es que realmente estaba imprimiendo caracter por caracter y en este caso no, en este caso se 
+ * 			imprime todo dentro de una cadena de texto
+ * */
+			cntJson += (char)tmp;
+			System.out.println(cntJson);
 		}
 		
 	}
